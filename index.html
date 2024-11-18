@@ -12,7 +12,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #d6e9f2; 
+            background-color: #d6e9f2;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,10 +20,97 @@
             font-family: 'MuYao', cursive;
             color: #000000;
             text-align: center;
+            overflow: hidden;
         }
         .text {
             font-size: 36px;
             line-height: 1.5;
+            z-index: 20;
+        }
+
+        /* 雪花效果 */
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            z-index: 10;
+            user-select: none;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                top: -20px; /* 雪花从画面顶部外开始 */
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                top: 100vh; /* 雪花掉落到底部 */
+                opacity: 0;
+                transform: translateX(50px); /* 随机的水平飘动 */
+            }
+        }
+
+        /* 生成多个雪花，位置和动画速度不同 */
+        .snowflake:nth-child(1) {
+            left: 5%;
+            animation-duration: 13s;
+            animation-delay: 0.3s;
+            font-size: 20px;
+        }
+        .snowflake:nth-child(2) {
+            left: 15%;
+            animation-duration: 14s;
+            animation-delay: 0.2s;
+            font-size: 18px;
+        }
+        .snowflake:nth-child(3) {
+            left: 25%;
+            animation-duration: 16s;
+            animation-delay: 0.4s;
+            font-size: 22px;
+        }
+        .snowflake:nth-child(4) {
+            left: 35%;
+            animation-duration: 15s;
+            animation-delay: 0.7s;
+            font-size: 16px;
+        }
+        .snowflake:nth-child(5) {
+            left: 45%;
+            animation-duration: 14s;
+            animation-delay: 0.5s;
+            font-size: 24px;
+        }
+        .snowflake:nth-child(6) {
+            left: 55%;
+            animation-duration: 17s;
+            animation-delay: 0.9s;
+            font-size: 20px;
+        }
+        .snowflake:nth-child(7) {
+            left: 65%;
+            animation-duration: 18s;
+            animation-delay: 0.6s;
+            font-size: 18px;
+        }
+        .snowflake:nth-child(8) {
+            left: 75%;
+            animation-duration: 16s;
+            animation-delay: 0.8s;
+            font-size: 25px;
+        }
+        .snowflake:nth-child(9) {
+            left: 85%;
+            animation-duration: 14s;
+            animation-delay: 0.1s;
+            font-size: 23px;
+        }
+        .snowflake:nth-child(10) {
+            left: 95%;
+            animation-duration: 17s;
+            animation-delay: 0.4s;
+            font-size: 22px;
         }
     </style>
 </head>
@@ -31,7 +118,19 @@
     <div class="text">
         冬天的约定<br>
         你和我<br>
-         ฅ ̳͒ •ˑ • ̳͒ ฅ ✧
+        ฅ ̳͒ •ˑ • ̳͒ ฅ ✧
     </div>
+
+    <!-- 添加更多雪花 -->
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
 </body>
 </html>
